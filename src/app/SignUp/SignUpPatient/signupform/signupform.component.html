@@ -1,0 +1,36 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/patient-67-733426.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form     -->
+    <form (ngSubmit)="signupformdata(signup)" #signup="ngForm">
+      <input type="text" id="name" ngModel class="fadeIn second" name="name" placeholder="Full Name" required>
+      <input type="text" id="email" ngModel class="fadeIn second" name="email" placeholder="Email"  required>
+      <input type="text" id="username" ngModel class="fadeIn second" name="username" placeholder="Username" required>
+      <input type="text" id="age" ngModel class="fadeIn second" name="age" placeholder="Age" required>
+      <input type="text" id="height" ngModel class="fadeIn second" name="height" placeholder="Height" required>
+      <input type="text" id="weight" ngModel class="fadeIn second" name="weight" placeholder="Weight" required>
+      <input type="text" id="address" ngModel class="fadeIn second" name="address" placeholder="Address" required>
+      <input type="text" id="phone" ngModel class="fadeIn second" name="phone" placeholder="Phone Number" required>
+      <input type="text" id="password" ngModel class="fadeIn third" name="password" placeholder="password">
+      <input type="text" id="imageurl" ngModel class="fadeIn third" name="imageurl" placeholder="Image URL">
+      <input type="submit" class="fadeIn fourth" value="Sign Up">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" [routerLink]="['../login']">Login</a>
+    </div>
+
+  </div>
+</div>

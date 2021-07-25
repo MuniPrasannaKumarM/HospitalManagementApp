@@ -1,0 +1,45 @@
+
+<app-patientheader></app-patientheader>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <div class="registration-form">
+        <form  #f="ngForm" (ngSubmit)="onsubmitForm(f)" name="appoform">
+            <div class="form-icon">
+                <span><i class="icon icon-user"></i></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control item" id="doctorid" name="doctorid" placeholder="Doctor Id" [ngModel]="Doctor?.doctor_id" readonly>
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control item" name="patientid" id="patientid" placeholder="Patient Id" [ngModel]="Patient?.id" readonly>
+          </div>
+
+            <div class="form-group">
+              <input type="text" placeholder="Date" class="textbox-n form-control item"  onfocus="(this.type='date')" id="date" [(ngModel)]="datevariable" name="date">
+            </div>
+            <div class="form-group">
+              <!-- <input type="button" class="form-control item" id="checkavail" placeholder="checkavail"> -->
+              <button type="button" class="btn btn-block create-account" (click)="checkavailablility(Doctor.doctor_id,datevariable)">check Availability</button>
+          </div>
+
+          <div class="form-group" *ngIf="checkavail == true">
+
+              <div class="form-check text-center" *ngFor="let timing of timings">
+
+                <h6>{{timing}} p.m</h6>
+
+              </div>
+              <input type="text" class="form-control item" name="time" ngModel placeholder="Type the hour ">
+          </div>
+          <div class="form-group">
+                <button type="submit" class="btn btn-block create-account">Submit</button>
+            </div>
+        </form>
+
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+

@@ -1,0 +1,43 @@
+<app-doctorheader></app-doctorheader>
+<a [routerLink]="['../../../../']" class="btn btn-secondary offset-sm-11">Back</a>
+<h2 class="text-center">Prescription </h2>
+<div class="container" style="padding: 100px;">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form [formGroup]="prescriptionForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="appid">AppId</label>
+          <input
+            type="text"
+            id="appid"
+            formControlName="appid"
+            class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="patientid">Patient ID</label>
+          <input
+            type="text"
+            id="patientid"
+            formControlName="patientid"
+            class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="doctorid">Doctor ID</label>
+          <input
+            type="text"
+            id="doctorid"
+            formControlName="doctorid"
+            class="form-control">
+        </div>
+        <div formArrayName='prescription'>
+          <h4>ADD Tablets</h4>
+          <button class="btn btn-default"  (click)="onAddData()">Add Data</button>
+          <div  *ngFor="let formControl of getData(); let i = index">
+              <input type="text" [formControlName]="i" class="form-control">
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

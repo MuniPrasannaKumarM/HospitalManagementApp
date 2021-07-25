@@ -1,0 +1,62 @@
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<style>
+  a{
+    font-size: large;
+  }
+
+  #image{
+    justify-content: end;
+  }
+  .center {
+  margin: auto;
+  width: 60%;
+
+  padding: 10px;
+}
+.center-vertical{
+  padding: 100px 0;
+
+  text-align: center;
+}
+.center {
+  line-height: 200px;
+  height: 200px;
+
+  text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+.center a {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+img.resize-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+</style>
+
+<app-adminheader></app-adminheader>
+<a class="btn btn-secondary offset-sm-11" [routerLink]="['/']">Logout</a>
+<section class="part2 center-vertical">
+  <div class="container center">
+      <div class="row">
+          <div class="col-md-6">
+          <img alt="" class="resize-image text-center" id="image1" src="https://png.pngtree.com/png-clipart/20200701/original/pngtree-doctors-and-medical-teams-wearing-medical-mask-during-coronavirus-covid19-2019-png-image_5342449.jpg" height="40%" width="40%"/>
+            <a class="btn btn-secondary" [routerLink]="['viewdoctorprofiles']">Doctors</a>
+          </div>
+          <div class="col-md-6"><img alt="" class="resize-image center-block" id="image2" src="https://image.pngaaa.com/955/3670955-middle.png" height="40%" width="40%"/>
+            <a class="btn btn-secondary" [routerLink]="['viewpatientsprofiles']">Patients</a></div>
+
+      </div>
+  </div>
+</section>
+

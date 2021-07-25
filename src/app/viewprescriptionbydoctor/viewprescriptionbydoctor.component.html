@@ -1,0 +1,32 @@
+<div class="container">
+  <h2 class="text-center">Prescription for {{patientDoctorDetails?.patientid}}</h2>
+  <div class="row m-5">
+    <div class="col-sm-2">
+       Patient ID : {{patientDoctorDetails?.patientid}}
+    </div>
+    <div class="offset-sm-7 col-sm-3">
+      Doctor ID : {{patientDoctorDetails?.doctorid}}
+    </div>
+  </div>
+
+  <div class="row m-5">
+    <div class="col-sm-2">
+      Date : {{patientDoctorDetails?.date}}
+    </div>
+    <div class="offset-sm-7 col-sm-3">
+      Time : {{patientDoctorDetails?.time}}
+    </div>
+  </div>
+  <div class="row m-5">
+    Tablets -
+    <div class="col-sm-12 text-center my-5" *ngFor="let ind of prescriptionList">
+      {{ind}}
+    </div>
+
+  </div>
+  <div class="row m-5">
+    <div class="Offset-sm-10 col-sm-2 text-center my-5">
+      Doctor ID : {{patientDoctorDetails?.doctorid}}
+    </div>
+  </div>
+</div>

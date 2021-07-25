@@ -1,0 +1,37 @@
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+</script>
+<app-patientheader></app-patientheader>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container p-4" >
+    <div class="row">
+        <div class="col-md-6 col-xl-3"  *ngFor="let doctor of doctors;let i = index;">
+
+            <div class="card m-b-30 bg-secondary" >
+                <div class="card-body row">
+                    <div class="col-6">
+                        <a href=""><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="img-fluid rounded-circle w-60"></a>
+                    </div>
+                    <div class="col-6 card-title align-self-center mb-0">
+                        <h5>{{doctor?.firstname}}</h5>
+                        <p class="m-0">{{doctor?.specialism}}</p>
+                    </div>
+                </div>
+                <ul class=" list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-envelope float-right"></i> Email :{{doctor?.email}}</li>
+                    <li class="list-group-item"><i class="fa fa-phone float-right"></i> Phone : {{doctor?.phone}}</li>
+                    <li class="list-group-item"><i class="fa fa-phone float-right"></i> Address : {{doctor?.address}}</li>
+
+                </ul>
+                <div class="col-12">
+                  <div class="col-8"></div>
+
+                  <div class="col-4"><a class="btn btn-secondary" style="border-color: aliceblue;" [routerLink]="['../viewdoctor',doctor?.doctor_id]">View</a></div>
+                </div>
+            </div>
+        </div>
+            </div>
+</div>

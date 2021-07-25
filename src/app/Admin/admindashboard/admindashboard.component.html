@@ -1,0 +1,62 @@
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<style>
+  a{
+    font-size: large;
+  }
+
+  #image{
+    justify-content: end;
+  }
+  .center {
+  margin: auto;
+  width: 60%;
+
+  padding: 10px;
+}
+.center-vertical{
+  padding: 100px 0;
+
+  text-align: center;
+}
+.center {
+  line-height: 200px;
+  height: 200px;
+
+  text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+.center a {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+img.resize-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+</style>
+
+
+<section class="part2 center-vertical">
+  <div class="container center">
+      <div class="row">
+          <div class="col-md-6">
+          <img alt="" class="resize-image text-center" id="image1" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/patient-67-733426.png" height="40%" width="40%"/>
+            <a class="btn btn-secondary" >Doctors </a>
+          </div>
+          <div class="col-md-6"><img alt="" class="resize-image center-block" id="image2" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/patient-67-733426.png" height="40%" width="40%"/>
+            <a class="btn btn-secondary" >Patients</a></div>
+
+      </div>
+  </div>
+</section>
+<!-- [routerLink]="['applogin']" -->
+<!-- [routerLink]="['viewappointmentsbydoctor']" -->

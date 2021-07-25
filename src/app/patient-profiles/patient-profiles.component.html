@@ -1,0 +1,38 @@
+<app-adminheader></app-adminheader>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped custom-table">
+          <thead>
+            <tr>
+              <th>Patient ID</th>
+              <th>Patient Name</th>
+
+              <th>Patient Email</th>
+
+              <th>Patient Phone</th>
+              <th>Delete?</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr *ngFor="let patient of patients;let i = index;">
+
+              <td>{{patient?.id}}</td>
+              <td>
+                {{patient?.name}}</td>
+              <td>{{patient?.email}}</td>
+
+
+              <td>{{patient?.phone}}</td>
+              <td><button type="button" name="delete" class="form-control" (click)="onDeletePatient(patient?.id)" >Delete Patient</button></td>
+
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,65 @@
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<style>
+  a{
+    font-size: large;
+  }
+
+  #image{
+    justify-content: end;
+  }
+  .center {
+  margin: auto;
+  width: 60%;
+
+  padding: 10px;
+}
+.center-vertical{
+  padding: 100px 0;
+
+  text-align: center;
+}
+.center {
+  line-height: 200px;
+  height: 200px;
+
+  text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+.center a {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+img.resize-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+</style>
+
+<app-doctorheader></app-doctorheader>
+<a class="btn btn-secondary offset-sm-11" [routerLink]="['/']">Logout</a>
+<section class="part2 center-vertical">
+  <div class="container center">
+      <div class="row">
+          <div class="col-md-3">
+          <img alt="" class="resize-image text-center" id="image1" src="data:image/png;base64,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" height="40%" width="40%"/>
+            <a class="btn btn-secondary" [routerLink]="['viewappointmentsbydoctor']">View Appointments </a>
+          </div>
+          <div class="col-md-3"><img alt="" class="resize-image center-block" id="image2" src="https://www.clipartmax.com/png/middle/329-3291414_svg-transparent-font-with-png-free-appointment-icon-vector.png" height="40%" width="40%"/>
+            <a class="btn btn-secondary" [routerLink]="['applogin']">Appointments login</a></div>
+           <div class="col-md-3"><img alt="" class="resize-image center-block" id="image3" src="https://png.pngtree.com/png-clipart/20190117/ourmid/pngtree-hand-painted-medical-medical-treatment-prescription-png-image_434808.jpg" height="40%" width="40%"/>
+            <a class="btn btn-secondary" [routerLink]="['prescriptions']">Prescriptions given by doctor</a></div>
+            <div class="col-md-3"><img alt="" class="resize-image center-block" id="image3" src="https://lh3.googleusercontent.com/proxy/ZCvPc97pIwu_c4PCAdOnHzniUmDo2nA9V7Kww4j8P7ZO6rmwSCZ1YEQPQpzt-0YvClefaWyb84YjmfsZZ6xu_pS5jM5teAkMHM7xq1PUxuizJh7YiPTw8QnA2g" height="40%" width="40%"/>
+              <a class="btn btn-secondary" [routerLink]="['profile']">Doctor Profile View </a></div>
+      </div>
+  </div>
+</section>
+

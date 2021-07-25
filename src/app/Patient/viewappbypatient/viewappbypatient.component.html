@@ -1,0 +1,38 @@
+<app-patientheader></app-patientheader>
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-striped custom-table">
+        <thead>
+          <tr>
+            <th>Appointment ID</th>
+            <th>Doctor ID</th>
+
+            <th>Appointment Date</th>
+            <th>Appointment Time</th>
+            <th>Status</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+
+          <tr *ngFor="let patientDoctor of patientDoctors;let i = index;">
+
+            <td>{{patientDoctor?.appid}}</td>
+            <td>
+              {{patientDoctor?.doctorid}}</td>
+            <td>{{patientDoctor?.date}}</td>
+            <td>{{patientDoctor?.time}}</td>
+            <td>{{patientDoctor?.status}}</td>
+
+
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
