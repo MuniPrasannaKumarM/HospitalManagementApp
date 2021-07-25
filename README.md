@@ -1,0 +1,2 @@
+# HospitalManagementApp
+Angular Applications
